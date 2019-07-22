@@ -1,3 +1,5 @@
+#90,5
+
 class Solution:
     def swapPairs(self, head):
         """
@@ -22,4 +24,3 @@ class Solution:
             if not first.next:
                 return dummy.next
             second = first.next
-            
