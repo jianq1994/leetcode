@@ -5,7 +5,7 @@ from collections import deque
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+# 14,5
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         if not root:
@@ -30,5 +30,16 @@ class Solution:
                     cur = cur.right
                 else:
                     return ans
-                    
+
+#66~88,5
+
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:
+            return []
+        res = []
+        res.extend(self.inorderTraversal(root.left))
+        res.append(root.val)
+        res.extend(self.inorderTraversal(root.right))
+        return res                 
         
